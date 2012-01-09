@@ -6,4 +6,10 @@ Feature: Bowling Kata
 Scenario: Worst game ever
 	Given I have a new game
 	When I miss all the pins in every single frame
-	Then the result should be 0
+	Then the score should be the lowest
+	
+Scenario: A perfect score
+	Given I have a new game
+	When I do a strike on every frame
+	Then the score should be perfect
+	

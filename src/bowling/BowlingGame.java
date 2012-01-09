@@ -6,4 +6,7 @@ public class BowlingGame {
 		return 0;
 	}
 
+	public void roll(int i) {
+	}
+
 }

@@ -28,8 +28,23 @@ public class GameSteps extends Steps {
 		
 	}
 	
+	@When("I do a strike on every frame") 
+	public void scoreEveryFrame() {
+		this.game.roll(10);
+	}
+	
+	@Then("the score should be the lowest")
+	public void checkLowestScore() {
+		checkScore(0);
+	}
+
 	@Then("the result should be $result")
-	public void checkTheResult(int result) {
+	public void checkScore(int result) {
 		ensureThat(this.game.getScore(), is(result));
+	}
+	
+	@Then("the score should be perfect")
+	public void checkPerfectScore() {
+		checkScore(300);
 	}
 }
