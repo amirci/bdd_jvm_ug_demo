@@ -1,0 +1,9 @@
+Feature: Bowling Kata
+	As a Player
+	I want to play some bowling
+	To have some fun with my friends!
+	
+Scenario: Worst game ever
+	Given I have a new game
+	When  I score 0 in every frame
+	Then  the result should be 0
