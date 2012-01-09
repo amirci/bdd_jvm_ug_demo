@@ -5,5 +5,5 @@ Feature: Bowling Kata
 	
 Scenario: Worst game ever
 	Given I have a new game
-	When  I score 0 in every frame
-	Then  the result should be 0
+	When I miss all the pins in every single frame
+	Then the result should be 0
