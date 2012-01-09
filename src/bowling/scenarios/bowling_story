@@ -11,5 +11,10 @@ Scenario: Worst game ever
 Scenario: A perfect score
 	Given I have a new game
 	When I do a strike on every frame
-	Then the score should be perfect
+	Then the score should be the highest
 	
+
+Scenario: A bunch of average games
+	Given I have a new game
+	When I roll a game of "9, 0, 3, 7, 6, 1, 3, 7, 8, 1, 5, 5, 0, 10, 8, 0, 7, 3, 8, 2, 8"
+	Then the score is 131
