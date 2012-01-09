@@ -25,12 +25,16 @@ public class GameSteps extends Steps {
 	
 	@When("I miss all the pins in every single frame") 
 	public void missEveryFrame() {
-		
+		for(int i = 0; i < 20; i++) {
+			this.game.roll(0);
+		}
 	}
 	
 	@When("I do a strike on every frame") 
 	public void scoreEveryFrame() {
-		this.game.roll(10);
+		for(int i = 0; i < 12; i++) {
+			this.game.roll(10);
+		}
 	}
 	
 	@Then("the score should be the lowest")
