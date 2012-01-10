@@ -32,8 +32,11 @@ public class BowlingGame {
 			frame.first = this.rolls.get(i);
 			frame.second = this.rolls.get(i+1);
 			
-			if(frame.isStrike() || frame.isSpare()) {
+			if(frame.isStrike()) {
 				frame.third = this.rolls.get(i+2);
+			} else if(frame.isSpare()) {
+				frame.third = this.rolls.get(i+2);
+				i++;
 			} else {
 				i++;
 			}
